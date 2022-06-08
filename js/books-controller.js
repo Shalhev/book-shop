@@ -82,6 +82,7 @@ function openModal(bookId) {
     document.querySelector('.modal-body').innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem laudantium rem perspiciatis deleniti consectetur, natus nihil facilis vero. Excepturi ad atque blanditiis sapiente dicta aliquid laboriosam nam consequatur sed voluptatem!'
     document.querySelector('.modal-footer').innerText = `$${book.price}`
     document.querySelector('h6 span').innerText = book.id
+    document.querySelector('.rate-num').innerText = book.rate
 
 
 

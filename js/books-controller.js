@@ -36,7 +36,7 @@ function renderBooks() {
     `)
     document.querySelector('table tbody').innerHTML = strHTMLs.join('')
     if (books.length === 0) {
-        strHTMLs = `<tr class="bg-danger"><td colspan="5">NO BOOKS!</td></tr>`
+        strHTMLs = `<tr class="bg-danger"><td data-trans="no-books" colspan="5">NO BOOKS!</td></tr>`
         document.querySelector('table tbody').innerHTML = strHTMLs
     }
     updatePagesBts()

@@ -79,6 +79,10 @@ var gTrans = {
     'back-page': {
         en: 'Back Page',
         he: 'עמוד קודם'
+    },
+    'no-books': {
+        en: 'NO BOOKS',
+        he: 'אין ספרים!'
     }
 }
 

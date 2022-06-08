@@ -84,6 +84,12 @@ var gTrans = {
         en: 'NO BOOKS',
         he: 'אין ספרים!'
     }
+    ,
+    'rate-modal': {
+        en: '⭐ Rate: ⭐',
+        he: '⭐ דירוג: ⭐'
+    }
+
 }
 
 var gCurrLang = 'en';

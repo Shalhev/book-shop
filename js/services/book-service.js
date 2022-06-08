@@ -1,4 +1,4 @@
-
+'use stirct'
 const PAGE_SIZE = 5
 const STORAGE_KEY = 'books'
 var gPageIdx = 0
@@ -37,7 +37,6 @@ function updatePagesBts() {
     }
 
 }
-
 
 function getBooks() {
     return gBooks
@@ -92,6 +91,7 @@ function deleteBook(bookId) {
     gBooks.splice(bookIdx, 1)
     saveBooksToStorage()
 }
+
 function findBook(bookId) {
     const book = gBooks.find(book => bookId === book.id)
     return book

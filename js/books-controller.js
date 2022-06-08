@@ -1,5 +1,4 @@
-
-
+'use strict'
 const MAX_PRICE = 200
 var gBooks = []
 var gSortBy = ''
@@ -11,6 +10,13 @@ function init() {
     var books = loadFromStorage(STORAGE_KEY)
     if (!books || !books.length) {
         console.log('No BOOKS, Create Books');
+        gBooks.push(addeBook('Absalom, Absalom', 25))
+        gBooks.push(addeBook('A Time to Kill' , 15))
+        gBooks.push(addeBook('The House of Mirth', 19))
+        gBooks.push(addeBook('East of Eden', 10))
+        gBooks.push(addeBook('The Sun Also Rises', 59))
+        gBooks.push(addeBook('A Scanner Darkly', 35))
+        gBooks.push(addeBook('Moab is my Washpot', 99))
     } else {
         gBooks = books
     }
@@ -43,6 +49,7 @@ function renderBooks() {
     saveBooksToStorage()
     doTrans()
 }
+
 function onSetSortBy(sort) {
     gSortBy = sort
     renderBooks()
@@ -62,6 +69,7 @@ function onUpdateBook(bookId) {
     renderBooks()
 
 }
+
 function onDeleteBook(bookId) {
     deleteBook(bookId)
     renderBooks()
@@ -120,6 +128,7 @@ function onSetFilterByTxt(txt) {
     gFilterByTxt = txt
     renderBooks()
 }
+
 function onSetFilterByPrice(price) {
     gFilterByPrice = price
     document.querySelector('.filters .price').innerHTML = gFilterByPrice
@@ -131,8 +140,6 @@ function onSetFilterByRate(rate) {
     renderBooks()
 }
 
-
-
 function onSortPrice() {
     if (gSortBy === 'priceLowtoHigh') {
         gSortBy = 'priceHightoLow'
@@ -141,6 +148,7 @@ function onSortPrice() {
     }
     renderBooks()
 }
+
 function onSortTitle() {
     if (gSortBy === 'titleAtoZ') {
         gSortBy = 'titleZtoA'
